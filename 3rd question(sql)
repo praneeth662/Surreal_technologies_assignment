@@ -1,0 +1,9 @@
+select count(*) from employee where department = 'hr';
+select current_date;
+select * from department where salary between 50000 and 100000;
+select * from employee where empfnameclike 's%';
+select concat(empfname,' ',emplname) as full name from employee;
+select * from employee where dob between '02/05/1970' and '31/12/1975' group by gender
+select * from employee where emplname like "%-----a"
+select * from employee where empfname not in ("sanjay","sonia")
+select department from(select count(*) as emp_count,department from employee group by department) as department_count where emp_count<2
